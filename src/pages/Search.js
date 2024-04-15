@@ -1,12 +1,14 @@
-// Search.js
 import React from "react";
 import Header from "../components/Header";
+import BasicSearch from "../components/BasicSearch"; // 
 
-export default function Search() {
+const Search = () => {
   return (
     <>
-      <Header /> {/* Include the Header component */}
-      <h2>Search Page</h2>
+      <Header />
+      <BasicSearch /> 
     </>
   );
-}
+};
+
+export default Search;
