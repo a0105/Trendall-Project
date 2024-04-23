@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/latrobe-logo.png";
 
+import logo from "../../images/latrobe-logo.png";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -9,28 +9,35 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+
   return (
     <div className="relative">
-      <header className="border-grey-500 flex items-center justify-between px-8 py-4">
+      <header className="border-grey-500 flex items-center justify-between border-b-[1px] border-gray-100 px-8 py-4">
         <div className="flex items-center space-x-2">
           <img src={logo} alt="La Trobe Logo" className="h-9 w-auto" />
           <div className="h-6 border-r border-black"></div>
-          <h1 className="font-serif text-sm ">TRENDALL RESEARCH CENTER</h1>
+          <h1 className="text-sm font-semibold ">A.D TRENDALL RESEARCH CENTER</h1>
         </div>
 
         <div className="md:flex">
-          <ul className="hidden space-x-5 md:flex">
-            <li>
+          <ul className="hidden space-x-1 text-base   md:flex">
+            <li
+              variant="outline"
+              className="py-1 duration-200 rounded-md px-2 hover:bg-slate-400/15 hover:ease-in-out"
+            >
               <Link to="/Home">Home</Link>
             </li>
-            <li>
-              <Link to="/About">About</Link>
+            <li className="rounded-md px-2 py-1 duration-200 hover:bg-slate-400/15 hover:ease-in-out">
+              <Link to="/about">About</Link>
             </li>
-            <li>
+            <li className="rounded-md px-2 py-1 duration-200 hover:bg-slate-400/15 hover:ease-in-out">
+              <Link to="/news">News</Link>
+            </li>
+            <li className="rounded-md px-2 py-1 duration-200 hover:bg-slate-400/15 hover:ease-in-out">
               <Link to="/Contact">Contact</Link>
             </li>
-            <li>
-              <Link to="/Search">Search</Link>
+            <li className="rounded-md px-2 py-1 duration-200 hover:bg-slate-400/15 hover:ease-in-out">
+              <Link to="/Search">Search</Link>{" "}
             </li>
           </ul>
         </div>
@@ -75,6 +82,9 @@ export default function Header() {
           </li>
           <li>
             <Link to="/About">About</Link>
+          </li>
+          <li>
+            <Link to="/News">News</Link>
           </li>
           <li>
             <Link to="/Contact">Contact</Link>

@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../components/ui/Header";
+import NewsSection from "../components/ui/NewsSection"; 
 
-export default function Home() {
+export default function News() {
   return (
     <>
       <Header />
-      <h2>Home Page</h2>
-      
+      <NewsSection />
     </>
   );
 }
