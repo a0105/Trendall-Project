@@ -1,16 +1,14 @@
 import React from "react";
 import Header from "../components/ui/Header";
-import AboutInfo from "../components/ui/AboutInfo";
+import TrendalSection from "../components/ui/TrendallSection";
 import Footer from "../components/ui/footer";
 
 
-
-
-export default function About() {
+export default function LegacyPage() {
   return (
     <>
       <Header />
-      <AboutInfo />
+      <TrendalSection />
       <Footer />
     </>
   );

@@ -5,6 +5,7 @@ import {
   SearchBox,
   Hits,
   Highlight,
+  RefinementList,
 } from "react-instantsearch-dom";
 import Header from "../components/ui/Header";
 import {
@@ -31,7 +32,7 @@ function Hit({ hit }) {
           <img className="h-24" src={hit.Image} alt={hit.Collection} />
           <div>
             <p>
-              Fabric: <Highlight attribute="Fabric"  hit={hit} />
+              Fabric: <Highlight attribute="Fabric" hit={hit} />
             </p>
             <p>
               Technique: <Highlight attribute="Technique" hit={hit} />
@@ -77,8 +78,17 @@ const BasicSearch = () => {
       <div className="mx-auto max-w-4xl p-6">
         <h2 className="mb-4 text-2xl font-bold">Basic Search</h2>
         <InstantSearch searchClient={searchClient} indexName="artefacts">
-          <SearchBox classNames="px-5 py-5" />
+          <SearchBox
+            classNames={{
+              root: "bg-black",
+              form: "",
+              input: "text-white",
+              submitIcon: "",
+            }}
+          />
+
           <Hits hitComponent={Hit} />
+          <RefinementList attribute="Red-figure" />
         </InstantSearch>
       </div>
     </div>
