@@ -17,7 +17,6 @@ const NewsSection = () => {
           </div>
         </div>
         <div className="-mx-4 flex flex-wrap">
-          {/* make content dyanmic later */}
 
           <div className="w-full px-4 md:w-1/2 lg:w-1/3">
             <div className="mx-auto mb-10 max-w-[370px]">
